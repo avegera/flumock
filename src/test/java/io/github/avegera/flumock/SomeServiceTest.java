@@ -1,10 +1,10 @@
-package io.github.avegera.fluent.mockito;
+package io.github.avegera.flumock;
 
-import io.github.avegera.fluent.mockito.test.*;
+import io.github.avegera.flumock.test.*;
 import org.junit.jupiter.api.Test;
 import org.mockito.InOrder;
 
-import static io.github.avegera.fluent.mockito.FluentMockito.executionOf;
+import static io.github.avegera.flumock.Flumock.executionOf;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.*;
 
@@ -57,6 +57,7 @@ class SomeServiceTest {
 
         assertThat(result).isEqualTo(TEST_GENERATED_ID + TEST_BOOLEAN_RESULT);
     }
+
     @Test
     void enrichedTestSomeMethod2() {
         Service1 service1 = mock(Service1.class);

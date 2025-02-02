@@ -1,4 +1,4 @@
-package io.github.avegera.fluent.mockito.test;
+package io.github.avegera.flumock.test;
 
 public class Service2 {
 

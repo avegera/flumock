@@ -1,4 +1,4 @@
-package io.github.avegera.fluent.mockito.impl.model;
+package io.github.avegera.flumock.impl.model;
 
 import java.util.ArrayList;
 import java.util.HashSet;

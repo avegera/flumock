@@ -1,6 +1,6 @@
-package io.github.avegera.fluent.mockito.impl.step;
+package io.github.avegera.flumock.impl.step;
 
-import io.github.avegera.fluent.mockito.impl.model.ExecutionContext;
+import io.github.avegera.flumock.impl.model.ExecutionContext;
 
 public class ExecutionInitialStep<T> {
 

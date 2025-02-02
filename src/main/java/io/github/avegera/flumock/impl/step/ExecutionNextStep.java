@@ -1,8 +1,8 @@
-package io.github.avegera.fluent.mockito.impl.step;
+package io.github.avegera.flumock.impl.step;
 
-import io.github.avegera.fluent.mockito.impl.model.ExecutionContext;
+import io.github.avegera.flumock.impl.model.ExecutionContext;
 
-import static io.github.avegera.fluent.mockito.impl.ResultVerifier.verifyInvocation;
+import static io.github.avegera.flumock.impl.ResultVerifier.verifyInvocation;
 
 public class ExecutionNextStep<T> {
 

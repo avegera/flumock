@@ -1,4 +1,4 @@
-package io.github.avegera.fluent.mockito.impl.model;
+package io.github.avegera.flumock.impl.model;
 
 import org.mockito.InOrder;
 

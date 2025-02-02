@@ -1,7 +1,7 @@
-package io.github.avegera.fluent.mockito.impl.step;
+package io.github.avegera.flumock.impl.step;
 
-import io.github.avegera.fluent.mockito.impl.model.ExecutionContext;
-import io.github.avegera.fluent.mockito.impl.model.VoidMethodInvocation;
+import io.github.avegera.flumock.impl.model.ExecutionContext;
+import io.github.avegera.flumock.impl.model.VoidMethodInvocation;
 
 import java.util.function.Consumer;
 import java.util.stream.Stream;
