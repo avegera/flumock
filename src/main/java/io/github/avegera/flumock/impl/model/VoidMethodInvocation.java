@@ -1,11 +1,10 @@
-package io.github.avegera.fluent.mockito.impl.model;
+package io.github.avegera.flumock.impl.model;
 
 import org.mockito.InOrder;
 
 import java.util.function.Consumer;
 
 import static org.mockito.Mockito.doAnswer;
-import static org.mockito.Mockito.when;
 
 public class VoidMethodInvocation<M> implements Invocation {
 

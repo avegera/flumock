@@ -5,13 +5,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>io.github.avegera</groupId>
-    <artifactId>fluent-mockito</artifactId>
+    <artifactId>flumock</artifactId>
     <version>0.1.0</version>
     <packaging>jar</packaging>
 
     <name>${project.groupId}:${project.artifactId}</name>
-    <description>Fluent API for Mockito</description>
-    <url>https://github.com/avegera/fluent-mockito</url>
+    <description>Fluent API for Java mocks</description>
+    <url>https://github.com/avegera/flumock</url>
 
     <properties>
         <java.version>8</java.version>
@@ -48,9 +48,9 @@
     </developers>
 
     <scm>
-        <connection>scm:git:git://github.com/avegera/fluent-mockito.git</connection>
-        <developerConnection>scm:git:ssh://github.com:avegera/fluent-mockito.git</developerConnection>
-        <url>https://github.com/avegera/fluent-mockito/tree/main</url>
+        <connection>scm:git:git://github.com/avegera/flumock.git</connection>
+        <developerConnection>scm:git:ssh://github.com:avegera/flumock.git</developerConnection>
+        <url>https://github.com/avegera/flumock/tree/main</url>
     </scm>
 
     <distributionManagement>

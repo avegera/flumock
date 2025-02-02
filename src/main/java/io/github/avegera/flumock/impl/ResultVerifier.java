@@ -1,7 +1,7 @@
-package io.github.avegera.fluent.mockito.impl;
+package io.github.avegera.flumock.impl;
 
-import io.github.avegera.fluent.mockito.impl.model.ExecutionContext;
-import io.github.avegera.fluent.mockito.impl.model.Invocation;
+import io.github.avegera.flumock.impl.model.ExecutionContext;
+import io.github.avegera.flumock.impl.model.Invocation;
 import org.mockito.InOrder;
 
 import java.util.List;
