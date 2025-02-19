@@ -1,11 +1,12 @@
-package io.github.avegera.flumock.impl.step;
+package io.github.avegera.flumock.impl.steps;
 
+import io.github.avegera.flumock.api.steps.MethodInvocationStep;
 import io.github.avegera.flumock.impl.model.ExecutionContext;
 import io.github.avegera.flumock.impl.model.MethodInvocation;
 
 import java.util.function.Function;
 
-public class MethodInvocationStep<T, M, R> {
+public class MethodInvocationStepImpl<T, M, R> implements MethodInvocationStep<T, R> {
 
     private final ExecutionContext<T> context;
 
@@ -13,19 +14,19 @@ public class MethodInvocationStep<T, M, R> {
 
     private final Function<M, R> function;
 
-    public MethodInvocationStep(ExecutionContext<T> context, M mock, Function<M, R> function) {
+    public MethodInvocationStepImpl(ExecutionContext<T> context, M mock, Function<M, R> function) {
         this.context = context;
         this.mock = mock;
         this.function = function;
     }
 
-    public ExecutionNextStep<T> thatReturn(R value) {
+    public ExecutionNextStepImpl<T> thatReturn(R value) {
         context.getInvocations().add(new MethodInvocation<>(mock, function, value));
-        return new ExecutionNextStep<>(context);
+        return new ExecutionNextStepImpl<>(context);
     }
 
-    public ExecutionNextStep<T> thatReturnNull() {
+    public ExecutionNextStepImpl<T> thatReturnNull() {
         context.getInvocations().add(new MethodInvocation<>(mock, function, null));
-        return new ExecutionNextStep<>(context);
+        return new ExecutionNextStepImpl<>(context);
     }
 }
