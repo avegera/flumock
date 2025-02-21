@@ -1,6 +1,7 @@
 package io.github.avegera.flumock.impl.model;
 
 import org.mockito.InOrder;
+import org.mockito.Mockito;
 
 import java.util.function.Function;
 
@@ -22,6 +23,11 @@ public class MethodInvocation<M, R> implements Invocation {
 
     public void setup() {
         when(invocation.apply(mock)).thenReturn(result);
+    }
+
+    @Override
+    public void verify() {
+        invocation.apply(Mockito.verify(mock));
     }
 
     public void verify(InOrder inOrder) {

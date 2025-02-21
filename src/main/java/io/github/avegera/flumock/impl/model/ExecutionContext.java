@@ -14,6 +14,8 @@ public class ExecutionContext<T> {
 
     private final List<Invocation> invocations = new ArrayList<>();
 
+    private boolean verifyInOrder = false;
+
     public ExecutionContext(Supplier<T> method) {
         this.method = method;
     }
@@ -28,5 +30,12 @@ public class ExecutionContext<T> {
 
     public List<Invocation> getInvocations() {
         return invocations;
+    }
+
+    public boolean getVerifyInOrder() {
+        return verifyInOrder;
+    }
+    public void setVerifyInOrder(boolean verifyInOrder) {
+        this.verifyInOrder = verifyInOrder;
     }
 }

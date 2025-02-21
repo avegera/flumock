@@ -23,10 +23,10 @@ public class VoidMethodInvocationStepImpl<T, M> implements VoidMethodInvocationS
         this.invocation = invocation;
     }
 
-    public <M2> InvocationStepImpl<T, M2> thenInvoke(M2 nextMock) {
+    public <M2> MethodInvocationStepImpl<T, M2> invoke(M2 nextMock) {
         context.getInvocations().add(new VoidMethodInvocation<>(mock, invocation));
         context.getMocks().add(nextMock);
-        return new InvocationStepImpl<>(context, nextMock);
+        return new MethodInvocationStepImpl<>(context, nextMock);
     }
 
     public NoInvocationStepImpl<T> thenVerifyThatNoInvocations(Object... mocks) {
