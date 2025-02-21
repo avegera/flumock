@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.Set;
 
 import static org.mockito.Mockito.inOrder;
+import static org.mockito.Mockito.verifyNoMoreInteractions;
 
 public class ResultVerifier {
 
@@ -17,7 +18,11 @@ public class ResultVerifier {
     public static <T> T verifyInvocation(ExecutionContext<T> context) {
         setupInvocations(context);
         T result = context.getMethod().get();
-        verifyOrderInvocation(context.getMocks(), context.getInvocations());
+        if (context.getVerifyInOrder()) {
+            verifyInOrderInvocation(context.getMocks(), context.getInvocations());
+        } else {
+            verifyAnyOrderInvocation(context.getMocks(), context.getInvocations());
+        }
         return result;
     }
 
@@ -27,9 +32,16 @@ public class ResultVerifier {
         }
     }
 
-    private static void verifyOrderInvocation(Set<Object> mocks, List<Invocation> context) {
+    private static void verifyAnyOrderInvocation(Set<Object> mocks, List<Invocation> invocations) {
+        for (Invocation invocation : invocations) {
+            invocation.verify();
+        }
+        verifyNoMoreInteractions(mocks.toArray());
+    }
+
+    private static void verifyInOrderInvocation(Set<Object> mocks, List<Invocation> invocations) {
         InOrder inOrder = inOrder(mocks.toArray());
-        for (Invocation invocation : context) {
+        for (Invocation invocation : invocations) {
             invocation.verify(inOrder);
         }
         inOrder.verifyNoMoreInteractions();

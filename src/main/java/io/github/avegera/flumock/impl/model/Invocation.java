@@ -6,6 +6,7 @@ public interface Invocation {
 
     void setup();
 
-    //TODO: avoid Mockito mentions in interfaces (replace with generic context in future)
+    void verify();
+
     void verify(InOrder inOrder);
 }

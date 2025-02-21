@@ -1,6 +1,7 @@
 package io.github.avegera.flumock.impl.model;
 
 import org.mockito.InOrder;
+import org.mockito.Mockito;
 
 import java.util.function.Consumer;
 
@@ -19,6 +20,11 @@ public class VoidMethodInvocation<M> implements Invocation {
 
     public void setup() {
         invocation.accept(doAnswer(invocationOnMock -> null).when(mock));
+    }
+
+    @Override
+    public void verify() {
+        invocation.accept(Mockito.verify(mock));
     }
 
     public void verify(InOrder inOrder) {
