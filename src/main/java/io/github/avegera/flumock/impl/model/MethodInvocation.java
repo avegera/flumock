@@ -30,6 +30,7 @@ public class MethodInvocation<M, R> implements Invocation {
         invocation.apply(Mockito.verify(mock));
     }
 
+    @Override
     public void verify(InOrder inOrder) {
         invocation.apply(inOrder.verify(mock));
     }

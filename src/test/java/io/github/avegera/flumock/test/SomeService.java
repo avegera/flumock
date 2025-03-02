@@ -31,4 +31,12 @@ public class SomeService {
         service1.firstMethod(arg1);
         return arg2;
     }
+
+    public String someMethod3(Long arg1, String arg2) {
+        service1.firstMethod(arg1);
+        service2.secondMethod();
+        service2.secondMethod();
+        service2.secondMethod();
+        return arg2;
+    }
 }
