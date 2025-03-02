@@ -5,7 +5,7 @@ import java.util.function.Function;
 
 public interface MethodInvocationStep<T, M> {
 
-    <R> ResultMethodInvocationStep<T, R> method(Function<M, R> function);
+    <R> MethodInvocationResultStep<T, R> method(Function<M, R> function);
 
-    VoidMethodInvocationStep<T> voidMethod(Consumer<M> consumer);
+    InvocationVerificationStep<T> voidMethod(Consumer<M> consumer);
 }

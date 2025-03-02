@@ -1,6 +1,6 @@
 package io.github.avegera.flumock.api.steps;
 
-public interface InvocationNextStep<T> extends InvocationStep<T> {
+public interface ResultStep<T> {
 
     T thenReturnResult();
 }

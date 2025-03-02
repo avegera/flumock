@@ -27,6 +27,7 @@ public class VoidMethodInvocation<M> implements Invocation {
         invocation.accept(Mockito.verify(mock));
     }
 
+    @Override
     public void verify(InOrder inOrder) {
         invocation.accept(inOrder.verify(mock));
     }
